@@ -78,6 +78,8 @@ namespace ReValuedCarsAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            InitialzeDatabase(app);
+
             app.UseCors(config =>
             {
                 config.AllowAnyOrigin()
@@ -93,6 +95,14 @@ namespace ReValuedCarsAPI
             });
             app.UseStaticFiles();
             app.UseMvc();
+        }
+
+        private void InitialzeDatabase(IApplicationBuilder applicationBuilder)
+        {
+            using (var serviceScope = applicationBuilder.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                serviceScope.ServiceProvider.GetRequiredService<ReValuedCarsDbContext>().Database.Migrate();
+            }
         }
     }
 }
