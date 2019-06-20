@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReValuedCarsAPI.Intrastructures;
 
 namespace ReValuedCarsAPI.Migrations
 {
     [DbContext(typeof(ReValuedCarsDbContext))]
-    partial class ReValuedCarsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190620130820_dbchnges")]
+    partial class dbchnges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +41,7 @@ namespace ReValuedCarsAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("City");
+                    b.Property<int>("CityID");
 
                     b.Property<int>("FuelTypeID");
 
@@ -57,11 +59,15 @@ namespace ReValuedCarsAPI.Migrations
 
                     b.Property<int>("OwnerTypeID");
 
+                    b.Property<int>("PinCode");
+
                     b.Property<int>("Price");
 
                     b.Property<string>("RegistrationNumber");
 
                     b.Property<int>("RegistrationTypeID");
+
+                    b.Property<int>("StateID");
 
                     b.HasKey("Id");
 
