@@ -29,5 +29,6 @@ namespace ReValuedCarsAPI.Models
         public string CentralLocking { get; set; }
         public string ABS { get; set; }
         public string Airbags { get; set; }
+        public string CC { get; set; }
     }
 }

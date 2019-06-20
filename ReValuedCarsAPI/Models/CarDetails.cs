@@ -24,5 +24,6 @@ namespace ReValuedCarsAPI.Models
         public int CityID { get; set; }
         public int PinCode { get; set; }
         public string ImageUrl { get; set; }
+        public string CC { get; set; }
     }
 }
