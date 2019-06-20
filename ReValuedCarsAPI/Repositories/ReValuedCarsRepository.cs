@@ -80,6 +80,7 @@ namespace ReValuedCarsAPI.Repositories
                       {
                           Id = c.Id,
                           Name = c.Name,
+                          MakeYear = c.MakeYear,
                           Make = m.Name,
                           Model = md.Name,
                           CC = md.CC,
@@ -112,6 +113,7 @@ namespace ReValuedCarsAPI.Repositories
                       {
                           Id = c.Id,
                           Name = c.Name,
+                          MakeYear = c.MakeYear,
                           Make = m.Name,
                           Model = md.Name,
                           CC = md.CC,

@@ -24,6 +24,7 @@ namespace ReValuedCarsAPI.Models
         public string RegistrationNumber { get; set; }
         public int StateID { get; set; }
         public int CityID { get; set; }
-        public int PinCode { get; set; }        
+        public int PinCode { get; set; }
+        public string MakeYear { get; set; }
     }
 }
