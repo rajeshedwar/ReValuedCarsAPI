@@ -21,10 +21,8 @@ namespace ReValuedCarsAPI.Models
         public int InsuranceTypeID { get; set; }
         public int KilometersDriven { get; set; }
         public int Price { get; set; }
-        public string RegistrationNumber { get; set; }
-        public int StateID { get; set; }
-        public int CityID { get; set; }
-        public int PinCode { get; set; }
+        public string RegistrationNumber { get; set; }        
         public string MakeYear { get; set; }
+        public string City { get; set; }
     }
 }

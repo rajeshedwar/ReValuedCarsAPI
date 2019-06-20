@@ -26,5 +26,6 @@ namespace ReValuedCarsAPI.Models
         public string ImageUrl { get; set; }
         public string CC { get; set; }
         public string MakeYear { get; set; }
+        public string City { get; set; }
     }
 }
